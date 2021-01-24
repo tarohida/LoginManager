@@ -1,0 +1,56 @@
+'ssh':
+  banner: null
+  host_id: null 
+  login_method: ssh 
+  value:
+    login_cmd: null 
+    IdentityFile: </path/to/your/identityfile>
+    ip_fqdn: null 
+    login_name: <your login name> 
+    passphrase: null 
+    password: <your password> 
+    port: '22'
+
+'telnet':
+  banner: null
+  host_id: null 
+  login_method: telnet 
+  value:
+    login_cmd: uname -n
+    ip_fqdn: null 
+    login_name: null 
+    login_password: <your password> 
+    enable_password: <your password> 
+    port: '23'
+
+'remote_desktop':
+  banner: null
+  host_id: null 
+  login_method: remote_desktop 
+  value:
+    ip_fqdn: null 
+    domain_name: <your domain> 
+    login_name: <your name> 
+    password: <your password> 
+    port: '3389'
+
+'need_values':
+  'ssh':
+    - ip_fqdn
+    - login_name
+    - port
+    - password
+    - IdentityFile
+    - passphrase
+  'telnet':
+    - ip_fqdn
+    - login_name
+    - port 
+    - login_password
+    - enable_password
+  'remote_desktop':
+    - ip_fqdn
+    - domain_name
+    - login_name
+    - port 
+    - password
